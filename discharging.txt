@@ -1,3 +1,4 @@
+
 ============================================================
 Endpunkt: Gerät binden [Junior Box: OK]
 Path: /v1/device/bindSn
@@ -55,7 +56,7 @@ Body: {
     "meterSn": null,
     "energy": null,
     "installedPower": null,
-    "dataUpdateTime": "2026-03-29 14:50:53 UTC+01:00",
+    "dataUpdateTime": "2026-03-29 15:00:51 UTC+01:00",
     "communicationProtocolVersion": null
   },
   "info": "Request successful"
@@ -123,7 +124,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Firmware-Version prüfen
+Endpunkt: Firmware-Version prüfen 
 Path: /v1/device/checkVersion
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -142,7 +143,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Household Geräteliste
+Endpunkt: Household Geräteliste 
 Path: /v1/device/houseHold/list
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -156,7 +157,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Inverter-Liste
+Endpunkt: Inverter-Liste 
 Path: /v1/device/inverter/list
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -170,7 +171,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Inverter Lastdetails
+Endpunkt: Inverter Lastdetails 
 Path: /v1/device/inverter/load/detail
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -196,36 +197,6 @@ Body: {
 {
   "code": "200",
   "data": [
-    {
-      "realTimeCurrent": 0,
-      "realTimePower": 0,
-      "realTimeCurrent2": null,
-      "realTimePower2": null,
-      "realTimeVoltage": null,
-      "inverterTotalPower": null,
-      "soc": "93",
-      "createTime": "2026-03-28 14:55:00"
-    },
-    {
-      "realTimeCurrent": 0,
-      "realTimePower": 0,
-      "realTimeCurrent2": null,
-      "realTimePower2": null,
-      "realTimeVoltage": null,
-      "inverterTotalPower": null,
-      "soc": "93",
-      "createTime": "2026-03-28 15:00:00"
-    },
-    {
-      "realTimeCurrent": 0,
-      "realTimePower": 0,
-      "realTimeCurrent2": null,
-      "realTimePower2": null,
-      "realTimeVoltage": null,
-      "inverterTotalPower": null,
-      "soc": "93",
-      "createTime": "2026-03-28 15:05:00"
-    },
     {
       "realTimeCurrent": 0,
       "realTimePower": 0,
@@ -3067,6 +3038,36 @@ Body: {
       "createTime": "2026-03-29 14:45:00"
     },
     {
+      "realTimeCurrent": -3.7,
+      "realTimePower": -196.25,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:50:00"
+    },
+    {
+      "realTimeCurrent": -3.8,
+      "realTimePower": -200.79,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:55:00"
+    },
+    {
+      "realTimeCurrent": -3.4,
+      "realTimePower": -179.76,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 15:00:00"
+    },
+    {
       "realTimeCurrent": null,
       "realTimePower": null,
       "realTimeCurrent2": null,
@@ -3074,7 +3075,7 @@ Body: {
       "realTimeVoltage": null,
       "inverterTotalPower": null,
       "soc": null,
-      "createTime": "2026-03-29 14:50:00"
+      "createTime": "2026-03-29 15:05:00"
     }
   ],
   "info": "Request successful"
@@ -3090,7 +3091,7 @@ Body: {
 {
   "code": "200",
   "data": {
-    "dateTime": "2026-03-29 13:50:53",
+    "dateTime": "2026-03-29 14:00:51",
     "sn": "R07E9646680XXXXX-BMS",
     "outputMethod": null,
     "deviceHardwareVersion": null,
@@ -3144,7 +3145,7 @@ Body: {
     "boxVersion": null,
     "boxSvnVersion": null,
     "batteryCount": null,
-    "lastUpdateTime": "2026-03-29 13:50:53",
+    "lastUpdateTime": "2026-03-29 14:00:51",
     "bmsCommunication": null,
     "boxCommunication": null,
     "firmwareVersion": null,
@@ -3182,574 +3183,17 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Echtzeit-Daten (realTime/data)
+Endpunkt: Echtzeit-Daten (realTime/data) 
 Path: /v1/device/realTime/data
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
   "collectorSn": "R07E9646680XXXXX"
 }
 ============================================================
-{
-  "code": "200",
-  "data": [
-    {
-      "flag": false,
-      "pointId": "T",
-      "pointValue": "2026-03-29 13:50:52",
-      "pointNameCn": "数据采集时间"
-    },
-    {
-      "flag": false,
-      "pointId": "SUB",
-      "pointValue": "l300250703156306",
-      "pointNameCn": "子设备列表"
-    },
-    {
-      "flag": false,
-      "pointId": "TIME",
-      "pointValue": "2026-03-29 13:50:53",
-      "pointNameCn": "子设备最后一包时间"
-    },
-    {
-      "flag": false,
-      "pointId": "100",
-      "pointValue": "Battery-L",
-      "pointNameCn": "主机设备名称"
-    },
-    {
-      "flag": false,
-      "pointId": "200",
-      "pointValue": "Dyness TECHNOLOGY",
-      "pointNameCn": "主机厂商名称"
-    },
-    {
-      "flag": false,
-      "pointId": "300",
-      "pointValue": "2.50-62.0.11",
-      "pointNameCn": "主机软件版本"
-    },
-    {
-      "flag": false,
-      "pointId": "400",
-      "pointValue": "1",
-      "pointNameCn": "电池的总数量"
-    },
-    {
-      "flag": false,
-      "pointId": "500",
-      "pointValue": "",
-      "pointNameCn": "序列号SN"
-    },
-    {
-      "flag": false,
-      "pointId": "600",
-      "pointValue": "53.04",
-      "pointNameCn": "平均电压"
-    },
-    {
-      "flag": false,
-      "pointId": "700",
-      "pointValue": "-3.7",
-      "pointNameCn": "总电流"
-    },
-    {
-      "flag": false,
-      "pointId": "800",
-      "pointValue": "79",
-      "pointNameCn": "平均SOC"
-    },
-    {
-      "flag": false,
-      "pointId": "900",
-      "pointValue": "",
-      "pointNameCn": "平均循环次数"
-    },
-    {
-      "flag": false,
-      "pointId": "1000",
-      "pointValue": "",
-      "pointNameCn": "最大循环次数"
-    },
-    {
-      "flag": false,
-      "pointId": "1100",
-      "pointValue": "",
-      "pointNameCn": "平均SOH"
-    },
-    {
-      "flag": false,
-      "pointId": "1200",
-      "pointValue": "100",
-      "pointNameCn": "最小SOH"
-    },
-    {
-      "flag": false,
-      "pointId": "1300",
-      "pointValue": "3.316",
-      "pointNameCn": "单芯最高电压"
-    },
-    {
-      "flag": false,
-      "pointId": "1400",
-      "pointValue": "258",
-      "pointNameCn": "单芯最高电压的编号最小的模块"
-    },
-    {
-      "flag": false,
-      "pointId": "1401",
-      "pointValue": "1",
-      "pointNameCn": "最高单压模块"
-    },
-    {
-      "flag": false,
-      "pointId": "1402",
-      "pointValue": "2",
-      "pointNameCn": "最高单压电芯"
-    },
-    {
-      "flag": false,
-      "pointId": "1500",
-      "pointValue": "3.315",
-      "pointNameCn": "单芯最低电压"
-    },
-    {
-      "flag": false,
-      "pointId": "1600",
-      "pointValue": "257",
-      "pointNameCn": "单芯最低电压的编号最小的模块"
-    },
-    {
-      "flag": false,
-      "pointId": "1601",
-      "pointValue": "1",
-      "pointNameCn": "最低单压模块"
-    },
-    {
-      "flag": false,
-      "pointId": "1602",
-      "pointValue": "1",
-      "pointNameCn": "最低单压电芯"
-    },
-    {
-      "flag": false,
-      "pointId": "1700",
-      "pointValue": "",
-      "pointNameCn": "单芯平均温度"
-    },
-    {
-      "flag": false,
-      "pointId": "1800",
-      "pointValue": "15.5",
-      "pointNameCn": "单芯最高温度"
-    },
-    {
-      "flag": false,
-      "pointId": "1900",
-      "pointValue": "257",
-      "pointNameCn": "单芯最高温度的编号最小的模块"
-    },
-    {
-      "flag": false,
-      "pointId": "1901",
-      "pointValue": "1",
-      "pointNameCn": "最高温度模块"
-    },
-    {
-      "flag": false,
-      "pointId": "1902",
-      "pointValue": "1",
-      "pointNameCn": "最高温度NTC"
-    },
-    {
-      "flag": false,
-      "pointId": "2000",
-      "pointValue": "15.2",
-      "pointNameCn": "单芯最低温度"
-    },
-    {
-      "flag": false,
-      "pointId": "2100",
-      "pointValue": "259",
-      "pointNameCn": "单芯最低温度的编号最小的模块"
-    },
-    {
-      "flag": false,
-      "pointId": "2101",
-      "pointValue": "1",
-      "pointNameCn": "最低温度模块"
-    },
-    {
-      "flag": false,
-      "pointId": "2102",
-      "pointValue": "3",
-      "pointNameCn": "最低温度NTC"
-    },
-    {
-      "flag": false,
-      "pointId": "2200",
-      "pointValue": "",
-      "pointNameCn": "MOSFET平均温度"
-    },
-    {
-      "flag": false,
-      "pointId": "2300",
-      "pointValue": "17.6",
-      "pointNameCn": "MOSFET最高温度"
-    },
-    {
-      "flag": false,
-      "pointId": "2400",
-      "pointValue": "1",
-      "pointNameCn": "MOSFET最高温度的编号最小的模块"
-    },
-    {
-      "flag": false,
-      "pointId": "2500",
-      "pointValue": "",
-      "pointNameCn": "MOSFET最低温度"
-    },
-    {
-      "flag": false,
-      "pointId": "2600",
-      "pointValue": "",
-      "pointNameCn": "MOSFET最低温度的编号最小的模块"
-    },
-    {
-      "flag": false,
-      "pointId": "2700",
-      "pointValue": "",
-      "pointNameCn": "BMS平均温度"
-    },
-    {
-      "flag": false,
-      "pointId": "2800",
-      "pointValue": "11.4",
-      "pointNameCn": "BMS最高温度"
-    },
-    {
-      "flag": false,
-      "pointId": "2900",
-      "pointValue": "1",
-      "pointNameCn": "BMS最高温度所在模块及序号"
-    },
-    {
-      "flag": false,
-      "pointId": "3000",
-      "pointValue": "11.4",
-      "pointNameCn": "BMS最低温度"
-    },
-    {
-      "flag": false,
-      "pointId": "3100",
-      "pointValue": "1",
-      "pointNameCn": "BMS最低温度所在模块及序号"
-    },
-    {
-      "flag": false,
-      "pointId": "3200",
-      "pointValue": "0",
-      "pointNameCn": "系统告警状态1"
-    },
-    {
-      "flag": false,
-      "pointId": "3201",
-      "pointValue": "0",
-      "pointNameCn": "单芯电压一致性告警"
-    },
-    {
-      "flag": false,
-      "pointId": "3202",
-      "pointValue": "0",
-      "pointNameCn": "MOSFET高温"
-    },
-    {
-      "flag": false,
-      "pointId": "3203",
-      "pointValue": "0",
-      "pointNameCn": "单芯温度低温"
-    },
-    {
-      "flag": false,
-      "pointId": "3204",
-      "pointValue": "0",
-      "pointNameCn": "单芯温度高温"
-    },
-    {
-      "flag": false,
-      "pointId": "3205",
-      "pointValue": "0",
-      "pointNameCn": "单芯电压低压"
-    },
-    {
-      "flag": false,
-      "pointId": "3206",
-      "pointValue": "0",
-      "pointNameCn": "单芯电压高压"
-    },
-    {
-      "flag": false,
-      "pointId": "3207",
-      "pointValue": "0",
-      "pointNameCn": "模块总压低压"
-    },
-    {
-      "flag": false,
-      "pointId": "3208",
-      "pointValue": "0",
-      "pointNameCn": "模块总压高压"
-    },
-    {
-      "flag": false,
-      "pointId": "3300",
-      "pointValue": "0",
-      "pointNameCn": "系统告警状态2"
-    },
-    {
-      "flag": false,
-      "pointId": "3301",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "3302",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "3303",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "3304",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "3305",
-      "pointValue": "0",
-      "pointNameCn": "内部通信错误"
-    },
-    {
-      "flag": false,
-      "pointId": "3306",
-      "pointValue": "0",
-      "pointNameCn": "放电过流告警"
-    },
-    {
-      "flag": false,
-      "pointId": "3307",
-      "pointValue": "0",
-      "pointNameCn": "充电过流告警"
-    },
-    {
-      "flag": false,
-      "pointId": "3308",
-      "pointValue": "0",
-      "pointNameCn": "单芯温度一致性告警"
-    },
-    {
-      "flag": false,
-      "pointId": "3400",
-      "pointValue": "0",
-      "pointNameCn": "系统保护状态1"
-    },
-    {
-      "flag": false,
-      "pointId": "3401",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "3402",
-      "pointValue": "0",
-      "pointNameCn": "MOSFET过温"
-    },
-    {
-      "flag": false,
-      "pointId": "3403",
-      "pointValue": "0",
-      "pointNameCn": "单芯温度欠温"
-    },
-    {
-      "flag": false,
-      "pointId": "3404",
-      "pointValue": "0",
-      "pointNameCn": "单芯温度过温"
-    },
-    {
-      "flag": false,
-      "pointId": "3405",
-      "pointValue": "0",
-      "pointNameCn": "单芯电压欠压"
-    },
-    {
-      "flag": false,
-      "pointId": "3406",
-      "pointValue": "0",
-      "pointNameCn": "单芯电压过压"
-    },
-    {
-      "flag": false,
-      "pointId": "3407",
-      "pointValue": "0",
-      "pointNameCn": "模块总压欠压"
-    },
-    {
-      "flag": false,
-      "pointId": "3408",
-      "pointValue": "0",
-      "pointNameCn": "模块总压过压"
-    },
-    {
-      "flag": false,
-      "pointId": "3500",
-      "pointValue": "0",
-      "pointNameCn": "系统保护状态2"
-    },
-    {
-      "flag": false,
-      "pointId": "3501",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "3502",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "3503",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "3504",
-      "pointValue": "0",
-      "pointNameCn": "系统故障保护"
-    },
-    {
-      "flag": false,
-      "pointId": "3505",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "3506",
-      "pointValue": "0",
-      "pointNameCn": "放电过流保护"
-    },
-    {
-      "flag": false,
-      "pointId": "3507",
-      "pointValue": "0",
-      "pointNameCn": "充电过流保护"
-    },
-    {
-      "flag": false,
-      "pointId": "3508",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "3600",
-      "pointValue": "56.5",
-      "pointNameCn": "充电电压建议上限"
-    },
-    {
-      "flag": false,
-      "pointId": "3700",
-      "pointValue": "48.0",
-      "pointNameCn": "充电电压建议下限"
-    },
-    {
-      "flag": false,
-      "pointId": "3800",
-      "pointValue": "40.0",
-      "pointNameCn": "最大充电电流"
-    },
-    {
-      "flag": false,
-      "pointId": "3900",
-      "pointValue": "100.0",
-      "pointNameCn": "最大放电电流"
-    },
-    {
-      "flag": false,
-      "pointId": "4000",
-      "pointValue": "192",
-      "pointNameCn": "充放电状态"
-    },
-    {
-      "flag": false,
-      "pointId": "4001",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "4002",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "4003",
-      "pointValue": "0",
-      "pointNameCn": "空"
-    },
-    {
-      "flag": false,
-      "pointId": "4004",
-      "pointValue": "0",
-      "pointNameCn": "满充请求"
-    },
-    {
-      "flag": false,
-      "pointId": "4005",
-      "pointValue": "0",
-      "pointNameCn": "强充2"
-    },
-    {
-      "flag": false,
-      "pointId": "4006",
-      "pointValue": "0",
-      "pointNameCn": "强充1"
-    },
-    {
-      "flag": false,
-      "pointId": "4007",
-      "pointValue": "1",
-      "pointNameCn": "Discharge enable"
-    },
-    {
-      "flag": false,
-      "pointId": "4008",
-      "pointValue": "1",
-      "pointNameCn": "Charge enable"
-    },
-    {
-      "flag": false,
-      "pointId": "4100",
-      "pointValue": "0",
-      "pointNameCn": "总报警状态"
-    }
-  ],
-  "info": "Request successful"
-}
+FEHLER: 'charmap' codec can't encode characters in position 152-157: character maps to <undefined>
 
 ============================================================
-Endpunkt: Gerät lesen (einzelne/mehrere Punkte)
+Endpunkt: Gerät lesen (einzelne/mehrere Punkte) 
 Path: /v1/device/read
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3778,7 +3222,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Historische Daten exportieren
+Endpunkt: Historische Daten exportieren 
 Path: /v1/device/history/export/task
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3816,7 +3260,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Laststeuerung Einstellungen
+Endpunkt: Laststeuerung Einstellungen 
 Path: /v1/loadControl/setting/detail
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3830,7 +3274,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Erweiterte Einstellungen
+Endpunkt: Erweiterte Einstellungen 
 Path: /v1/advanced/setting/detail
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3840,7 +3284,7 @@ Body: {
 FEHLER: HTTPSConnectionPool(host='open-api.dyness.com', port=443): Read timed out. (read timeout=15)
 
 ============================================================
-Endpunkt: Basis-Einstellungen lesen
+Endpunkt: Basis-Einstellungen lesen 
 Path: /v1/base/read
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3854,7 +3298,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Sicherheitseinstellungen
+Endpunkt: Sicherheitseinstellungen 
 Path: /v1/safety/setting/detail
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3864,7 +3308,7 @@ Body: {
 FEHLER: HTTPSConnectionPool(host='open-api.dyness.com', port=443): Read timed out. (read timeout=15)
 
 ============================================================
-Endpunkt: Systemzeit-Einstellungen
+Endpunkt: Systemzeit-Einstellungen 
 Path: /v1/systemTime/setting/detail
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3878,7 +3322,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Fehlerwarnung Einstellungen
+Endpunkt: Fehlerwarnung Einstellungen 
 Path: /v1/faultWarn/setting/detail
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3892,7 +3336,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Erkennung/Inspektion Einstellungen
+Endpunkt: Erkennung/Inspektion Einstellungen 
 Path: /v1/detection/setting/single/detail
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3906,7 +3350,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Inverter-Einstellungen Detail
+Endpunkt: Inverter-Einstellungen Detail 
 Path: /v1/inverter/setting/detail
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3920,7 +3364,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Inverter-Einstellung einzeln lesen
+Endpunkt: Inverter-Einstellung einzeln lesen 
 Path: /v1/inverter/setting/single/detail
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3948,7 +3392,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Nur Entlade-Konfiguration
+Endpunkt: Nur Entlade-Konfiguration 
 Path: /v1/device/singleGetDischargeConfig
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3962,7 +3406,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Alarm-/Fehlerliste
+Endpunkt: Alarm-/Fehlerliste 
 Path: /v1/alarm/query
 Body: {
   "deviceSn": "R07E9646680XXXXX-BMS",
@@ -3976,7 +3420,7 @@ Body: {
 }
 
 ============================================================
-Endpunkt: Gruppen-Liste
+Endpunkt: Gruppen-Liste 
 Path: /v1/group/getGroupList
 Body: {}
 ============================================================
@@ -3987,7 +3431,7 @@ Body: {}
 }
 
 ============================================================
-Endpunkt: Safety-Code Liste
+Endpunkt: Safety-Code Liste 
 Path: /v1/group/getSafelyList
 Body: {}
 ============================================================
