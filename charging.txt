@@ -1,0 +1,4445 @@
+
+============================================================
+Endpunkt: Gerät binden [Junior Box: OK]
+Path: /v1/device/bindSn
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "The device is bound by someone else"
+}
+
+============================================================
+Endpunkt: Household Storage Detail [Junior Box: OK]
+Path: /v1/device/household/storage/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "200",
+  "data": {
+    "deviceName": "PowerHaus",
+    "deviceModelName": "PowerHaus",
+    "deviceModelCode": "145",
+    "factory": "1",
+    "deviceType": "Energy Storage",
+    "deviceTypeCode": "4",
+    "deviceSn": "R07E964668XXXXX-BMS",
+    "collectorSn": null,
+    "stationId": "47029036263025",
+    "stationName": "XXXXX",
+    "position": "XXXXX, XXXXX Hamburg, Germany",
+    "systemType": "20011",
+    "stationType": "20001",
+    "deviceCommunicationStatus": "Online",
+    "deviceCommunicationStatusCode": "1",
+    "firmwareVersion": "2.50-62.0.11",
+    "mpptVersion": null,
+    "voltage": "51.2",
+    "voltageUnit": "V",
+    "current": "50.00",
+    "currentUnit": "A",
+    "brand": "DYNESS",
+    "otaResult": null,
+    "otaMpptResult": null,
+    "imgAddress": "https://web-static.dyness.com/device/images/PowerHausWeb.png",
+    "productType": null,
+    "batteryCategory": "2",
+    "masterSlaveStatus": null,
+    "createTime": null,
+    "meterSn": null,
+    "energy": null,
+    "installedPower": null,
+    "dataUpdateTime": "2026-03-29 15:30:53 UTC+01:00",
+    "communicationProtocolVersion": null
+  },
+  "info": "Request successful"
+}
+
+============================================================
+Endpunkt: Storage Geräteliste [Junior Box: OK — liefert workStatus]
+Path: /v1/device/storage/list
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "200",
+  "data": {
+    "list": [
+      {
+        "deviceSn": "R07E964668XXXXX-BMS",
+        "collectorSn": "R07E964668XXXXX",
+        "deviceName": "PowerHaus",
+        "deviceCommunicationStatus": "Online",
+        "deviceCommunicationStatusCode": "1",
+        "deviceModelName": "PowerHaus",
+        "deviceModelCode": "145",
+        "parentCode": "145",
+        "parentName": null,
+        "factory": "1",
+        "batteryCategory": "2",
+        "productType": "1",
+        "workStatus": "Standby",
+        "stationId": "47029036263025",
+        "stationName": "XXXXX",
+        "position": "XXXXX, XXXXX Hamburg, Germany",
+        "systemType": "20011",
+        "stationType": "20001",
+        "firmwareVersion": "2.50-62.0.11",
+        "operationPermission": "1",
+        "createTime": "2026-02-20 18:06:52",
+        "masterSlaveStatus": null
+      }
+    ],
+    "pageNum": 1,
+    "pageSize": 10,
+    "total": 1
+  },
+  "info": "Request successful"
+}
+
+============================================================
+Endpunkt: Anlageninfo [Junior Box: OK]
+Path: /v1/station/info
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS"
+}
+============================================================
+{
+  "code": "200",
+  "data": {
+    "installedPower": "1.0",
+    "batteryCapacity": "5.12",
+    "inverterTotalPower": "0.000"
+  },
+  "info": "Request successful"
+}
+
+============================================================
+Endpunkt: Firmware-Version prüfen
+Path: /v1/device/checkVersion
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "200",
+  "data": {
+    "bmsLastedVersion": null,
+    "dspLastedVersion": "V312",
+    "armLastedVersion": null,
+    "mpptLastedVersion": null
+  },
+  "info": "Request successful"
+}
+
+============================================================
+Endpunkt: Household Geräteliste
+Path: /v1/device/houseHold/list
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "request parameter is not null"
+}
+
+============================================================
+Endpunkt: Inverter-Liste
+Path: /v1/device/inverter/list
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "200",
+  "data": [],
+  "info": "Request successful"
+}
+
+============================================================
+Endpunkt: Inverter Lastdetails
+Path: /v1/device/inverter/load/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "Device ID Cannot Be Empty"
+}
+
+============================================================
+Endpunkt: Letzte Leistungsdaten [Junior Box: OK]
+Path: /v1/device/getLastPowerDataBySn
+Body: {
+  "pageNo": 1,
+  "pageSize": 1,
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "200",
+  "data": [
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 15:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 15:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 15:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 15:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 15:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 16:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 17:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 18:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 19:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 19:05:00"
+    },
+    {
+      "realTimeCurrent": -0.2,
+      "realTimePower": -10.62,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 19:10:00"
+    },
+    {
+      "realTimeCurrent": -0.2,
+      "realTimePower": -10.62,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 19:15:00"
+    },
+    {
+      "realTimeCurrent": -3.5,
+      "realTimePower": -184.94,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "93",
+      "createTime": "2026-03-28 19:20:00"
+    },
+    {
+      "realTimeCurrent": -2.6,
+      "realTimePower": -137.33,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "92",
+      "createTime": "2026-03-28 19:25:00"
+    },
+    {
+      "realTimeCurrent": -5.6,
+      "realTimePower": -294.95,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "92",
+      "createTime": "2026-03-28 19:30:00"
+    },
+    {
+      "realTimeCurrent": -2.6,
+      "realTimePower": -137.2,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "92",
+      "createTime": "2026-03-28 19:35:00"
+    },
+    {
+      "realTimeCurrent": -2.7,
+      "realTimePower": -142.51,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "92",
+      "createTime": "2026-03-28 19:40:00"
+    },
+    {
+      "realTimeCurrent": -2.6,
+      "realTimePower": -137.25,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "91",
+      "createTime": "2026-03-28 19:45:00"
+    },
+    {
+      "realTimeCurrent": -3.2,
+      "realTimePower": -168.86,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "91",
+      "createTime": "2026-03-28 19:50:00"
+    },
+    {
+      "realTimeCurrent": -6.4,
+      "realTimePower": -336.7,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "91",
+      "createTime": "2026-03-28 19:55:00"
+    },
+    {
+      "realTimeCurrent": -3.8,
+      "realTimePower": -200.3,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "90",
+      "createTime": "2026-03-28 20:00:00"
+    },
+    {
+      "realTimeCurrent": -4.1,
+      "realTimePower": -216.07,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "90",
+      "createTime": "2026-03-28 20:05:00"
+    },
+    {
+      "realTimeCurrent": -4.5,
+      "realTimePower": -237.1,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "89",
+      "createTime": "2026-03-28 20:10:00"
+    },
+    {
+      "realTimeCurrent": -7.2,
+      "realTimePower": -378.36,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "89",
+      "createTime": "2026-03-28 20:15:00"
+    },
+    {
+      "realTimeCurrent": -6.2,
+      "realTimePower": -326,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "88",
+      "createTime": "2026-03-28 20:20:00"
+    },
+    {
+      "realTimeCurrent": -6.1,
+      "realTimePower": -320.74,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "88",
+      "createTime": "2026-03-28 20:25:00"
+    },
+    {
+      "realTimeCurrent": -3.2,
+      "realTimePower": -168.77,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "87",
+      "createTime": "2026-03-28 20:30:00"
+    },
+    {
+      "realTimeCurrent": -3.1,
+      "realTimePower": -163.59,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "87",
+      "createTime": "2026-03-28 20:35:00"
+    },
+    {
+      "realTimeCurrent": -3,
+      "realTimePower": -158.25,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "87",
+      "createTime": "2026-03-28 20:40:00"
+    },
+    {
+      "realTimeCurrent": -3.4,
+      "realTimePower": -179.38,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "86",
+      "createTime": "2026-03-28 20:45:00"
+    },
+    {
+      "realTimeCurrent": -2.9,
+      "realTimePower": -153,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "86",
+      "createTime": "2026-03-28 20:50:00"
+    },
+    {
+      "realTimeCurrent": -2.8,
+      "realTimePower": -147.84,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "86",
+      "createTime": "2026-03-28 20:55:00"
+    },
+    {
+      "realTimeCurrent": -7.1,
+      "realTimePower": -373.81,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "85",
+      "createTime": "2026-03-28 21:00:00"
+    },
+    {
+      "realTimeCurrent": -3.3,
+      "realTimePower": -174.11,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "85",
+      "createTime": "2026-03-28 21:05:00"
+    },
+    {
+      "realTimeCurrent": -6.3,
+      "realTimePower": -331.57,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "85",
+      "createTime": "2026-03-28 21:10:00"
+    },
+    {
+      "realTimeCurrent": -3.5,
+      "realTimePower": -184.62,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "84",
+      "createTime": "2026-03-28 21:15:00"
+    },
+    {
+      "realTimeCurrent": -3.3,
+      "realTimePower": -174.11,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "84",
+      "createTime": "2026-03-28 21:20:00"
+    },
+    {
+      "realTimeCurrent": -6.4,
+      "realTimePower": -336.9,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "84",
+      "createTime": "2026-03-28 21:25:00"
+    },
+    {
+      "realTimeCurrent": -2.8,
+      "realTimePower": -147.78,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "83",
+      "createTime": "2026-03-28 21:30:00"
+    },
+    {
+      "realTimeCurrent": -3.5,
+      "realTimePower": -184.73,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "83",
+      "createTime": "2026-03-28 21:35:00"
+    },
+    {
+      "realTimeCurrent": -7.3,
+      "realTimePower": -383.91,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "82",
+      "createTime": "2026-03-28 21:40:00"
+    },
+    {
+      "realTimeCurrent": -7.3,
+      "realTimePower": -383.47,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "82",
+      "createTime": "2026-03-28 21:45:00"
+    },
+    {
+      "realTimeCurrent": -4.4,
+      "realTimePower": -231.7,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "81",
+      "createTime": "2026-03-28 21:50:00"
+    },
+    {
+      "realTimeCurrent": -4.5,
+      "realTimePower": -237.01,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "81",
+      "createTime": "2026-03-28 21:55:00"
+    },
+    {
+      "realTimeCurrent": -4.4,
+      "realTimePower": -231.88,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 22:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-28 23:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:10:00"
+    },
+    {
+      "realTimeCurrent": -2.6,
+      "realTimePower": -137.93,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 00:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 01:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 02:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 03:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 04:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 05:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 06:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 07:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 07:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 07:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 07:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 07:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 07:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 07:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 07:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 07:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 07:45:00"
+    },
+    {
+      "realTimeCurrent": null,
+      "realTimePower": null,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": null,
+      "createTime": "2026-03-29 07:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 07:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "80",
+      "createTime": "2026-03-29 08:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 09:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 10:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 11:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 12:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:45:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:50:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 13:55:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:00:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:05:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:25:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:30:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:35:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:40:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:45:00"
+    },
+    {
+      "realTimeCurrent": -3.7,
+      "realTimePower": -196.25,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:50:00"
+    },
+    {
+      "realTimeCurrent": -3.8,
+      "realTimePower": -200.79,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 14:55:00"
+    },
+    {
+      "realTimeCurrent": -3.4,
+      "realTimePower": -179.76,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "79",
+      "createTime": "2026-03-29 15:00:00"
+    },
+    {
+      "realTimeCurrent": -6.9,
+      "realTimePower": -362.8,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "78",
+      "createTime": "2026-03-29 15:05:00"
+    },
+    {
+      "realTimeCurrent": -3.6,
+      "realTimePower": -189.68,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "78",
+      "createTime": "2026-03-29 15:10:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "77",
+      "createTime": "2026-03-29 15:15:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "77",
+      "createTime": "2026-03-29 15:20:00"
+    },
+    {
+      "realTimeCurrent": 0,
+      "realTimePower": 0,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": "77",
+      "createTime": "2026-03-29 15:25:00"
+    },
+    {
+      "realTimeCurrent": null,
+      "realTimePower": null,
+      "realTimeCurrent2": null,
+      "realTimePower2": null,
+      "realTimeVoltage": null,
+      "inverterTotalPower": null,
+      "soc": null,
+      "createTime": "2026-03-29 15:30:00"
+    }
+  ],
+  "info": "Request successful"
+}
+
+============================================================
+Endpunkt: Letzte Betriebsdaten [Junior Box: alle Felder null]
+Path: /v1/device/getLastRunningDataBySn
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS"
+}
+============================================================
+{
+  "code": "200",
+  "data": {
+    "dateTime": "2026-03-29 14:30:53",
+    "sn": "R07E964668XXXXX-BMS",
+    "outputMethod": null,
+    "deviceHardwareVersion": null,
+    "safetyCountry": null,
+    "runModel": null,
+    "workStatus": null,
+    "meterCommunication": null,
+    "meterStatus": null,
+    "ctStatus": null,
+    "sparePower": null,
+    "powerLimit": null,
+    "gridStatus": null,
+    "activePower": null,
+    "reactivePower": null,
+    "apparentPower": null,
+    "buyEnergy": null,
+    "sellEnergy": null,
+    "totalBuyEnergy": null,
+    "totalSellEnergy": null,
+    "loadPower": null,
+    "dayElectricity": null,
+    "totalElectricity": null,
+    "batteryPower": null,
+    "batteryVoltage": null,
+    "batteryCurrent": null,
+    "batterySoc": null,
+    "batterySoh": null,
+    "batteryStatus": null,
+    "bmsCommunicationStatus": null,
+    "chargingLimitCurrent": null,
+    "dischargeLimitCurrent": null,
+    "batteryTemperature": null,
+    "gridDischargeDepth": null,
+    "offGridDischargeDepth": null,
+    "generationPower": null,
+    "dayGeneration": null,
+    "totalGeneration": null,
+    "internalTemperature": null,
+    "heatDissipationTemperature": null,
+    "moduleTemperature": null,
+    "dsp1Version": null,
+    "dsp2Version": null,
+    "dspSvnVersion": null,
+    "dspInnerVersion": null,
+    "busVoltage": null,
+    "nbusVoltage": null,
+    "ratedPower": null,
+    "armVersion": null,
+    "armSvnVersion": null,
+    "armInnerVersion": null,
+    "boxVersion": null,
+    "boxSvnVersion": null,
+    "batteryCount": null,
+    "lastUpdateTime": "2026-03-29 14:30:53",
+    "bmsCommunication": null,
+    "boxCommunication": null,
+    "firmwareVersion": null,
+    "pvPower": null,
+    "gridCurrentR": null,
+    "gridCurrentS": null,
+    "gridCurrentT": null,
+    "gridFrequencyR": null,
+    "gridFrequencyS": null,
+    "gridFrequencyT": null,
+    "pv1Current": null,
+    "pv2Current": null,
+    "pv3Current": null,
+    "pv4Current": null,
+    "pv1Voltage": null,
+    "pv2Voltage": null,
+    "pv3Voltage": null,
+    "pv4Voltage": null,
+    "pv1Power": null,
+    "pv2Power": null,
+    "pv3Power": null,
+    "pv4Power": null,
+    "maxLeadBatCapacity": null,
+    "gridPower": null,
+    "rvoltage": null,
+    "rcurrent": null,
+    "rgridFrequency": null,
+    "rpower": null,
+    "rspareVoltage": null,
+    "rspareCurrent": null,
+    "rspareGridFrequency": null,
+    "rsparePower": null
+  },
+  "info": "Request successful"
+}
+
+============================================================
+Endpunkt: Echtzeit-Daten (realTime/data)
+Path: /v1/device/realTime/data
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "200",
+  "data": [
+    {
+      "flag": false,
+      "pointId": "T",
+      "pointValue": "2026-03-29 14:30:52",
+      "pointNameCn": "数据采集时间"
+    },
+    {
+      "flag": false,
+      "pointId": "SUB",
+      "pointValue": "l300250703156306",
+      "pointNameCn": "子设备列表"
+    },
+    {
+      "flag": false,
+      "pointId": "TIME",
+      "pointValue": "2026-03-29 14:30:53",
+      "pointNameCn": "子设备最后一包时间"
+    },
+    {
+      "flag": false,
+      "pointId": "100",
+      "pointValue": "Battery-L",
+      "pointNameCn": "主机设备名称"
+    },
+    {
+      "flag": false,
+      "pointId": "200",
+      "pointValue": "Dyness TECHNOLOGY",
+      "pointNameCn": "主机厂商名称"
+    },
+    {
+      "flag": false,
+      "pointId": "300",
+      "pointValue": "2.50-62.0.11",
+      "pointNameCn": "主机软件版本"
+    },
+    {
+      "flag": false,
+      "pointId": "400",
+      "pointValue": "1",
+      "pointNameCn": "电池的总数量"
+    },
+    {
+      "flag": false,
+      "pointId": "500",
+      "pointValue": "",
+      "pointNameCn": "序列号SN"
+    },
+    {
+      "flag": false,
+      "pointId": "600",
+      "pointValue": "54.49",
+      "pointNameCn": "平均电压"
+    },
+    {
+      "flag": false,
+      "pointId": "700",
+      "pointValue": "22.4",
+      "pointNameCn": "总电流"
+    },
+    {
+      "flag": false,
+      "pointId": "800",
+      "pointValue": "79",
+      "pointNameCn": "平均SOC"
+    },
+    {
+      "flag": false,
+      "pointId": "900",
+      "pointValue": "",
+      "pointNameCn": "平均循环次数"
+    },
+    {
+      "flag": false,
+      "pointId": "1000",
+      "pointValue": "",
+      "pointNameCn": "最大循环次数"
+    },
+    {
+      "flag": false,
+      "pointId": "1100",
+      "pointValue": "",
+      "pointNameCn": "平均SOH"
+    },
+    {
+      "flag": false,
+      "pointId": "1200",
+      "pointValue": "100",
+      "pointNameCn": "最小SOH"
+    },
+    {
+      "flag": false,
+      "pointId": "1300",
+      "pointValue": "3.41",
+      "pointNameCn": "单芯最高电压"
+    },
+    {
+      "flag": false,
+      "pointId": "1400",
+      "pointValue": "257",
+      "pointNameCn": "单芯最高电压的编号最小的模块"
+    },
+    {
+      "flag": false,
+      "pointId": "1401",
+      "pointValue": "1",
+      "pointNameCn": "最高单压模块"
+    },
+    {
+      "flag": false,
+      "pointId": "1402",
+      "pointValue": "1",
+      "pointNameCn": "最高单压电芯"
+    },
+    {
+      "flag": false,
+      "pointId": "1500",
+      "pointValue": "3.404",
+      "pointNameCn": "单芯最低电压"
+    },
+    {
+      "flag": false,
+      "pointId": "1600",
+      "pointValue": "260",
+      "pointNameCn": "单芯最低电压的编号最小的模块"
+    },
+    {
+      "flag": false,
+      "pointId": "1601",
+      "pointValue": "1",
+      "pointNameCn": "最低单压模块"
+    },
+    {
+      "flag": false,
+      "pointId": "1602",
+      "pointValue": "4",
+      "pointNameCn": "最低单压电芯"
+    },
+    {
+      "flag": false,
+      "pointId": "1700",
+      "pointValue": "",
+      "pointNameCn": "单芯平均温度"
+    },
+    {
+      "flag": false,
+      "pointId": "1800",
+      "pointValue": "15.6",
+      "pointNameCn": "单芯最高温度"
+    },
+    {
+      "flag": false,
+      "pointId": "1900",
+      "pointValue": "257",
+      "pointNameCn": "单芯最高温度的编号最小的模块"
+    },
+    {
+      "flag": false,
+      "pointId": "1901",
+      "pointValue": "1",
+      "pointNameCn": "最高温度模块"
+    },
+    {
+      "flag": false,
+      "pointId": "1902",
+      "pointValue": "1",
+      "pointNameCn": "最高温度NTC"
+    },
+    {
+      "flag": false,
+      "pointId": "2000",
+      "pointValue": "15.4",
+      "pointNameCn": "单芯最低温度"
+    },
+    {
+      "flag": false,
+      "pointId": "2100",
+      "pointValue": "258",
+      "pointNameCn": "单芯最低温度的编号最小的模块"
+    },
+    {
+      "flag": false,
+      "pointId": "2101",
+      "pointValue": "1",
+      "pointNameCn": "最低温度模块"
+    },
+    {
+      "flag": false,
+      "pointId": "2102",
+      "pointValue": "2",
+      "pointNameCn": "最低温度NTC"
+    },
+    {
+      "flag": false,
+      "pointId": "2200",
+      "pointValue": "",
+      "pointNameCn": "MOSFET平均温度"
+    },
+    {
+      "flag": false,
+      "pointId": "2300",
+      "pointValue": "18.0",
+      "pointNameCn": "MOSFET最高温度"
+    },
+    {
+      "flag": false,
+      "pointId": "2400",
+      "pointValue": "1",
+      "pointNameCn": "MOSFET最高温度的编号最小的模块"
+    },
+    {
+      "flag": false,
+      "pointId": "2500",
+      "pointValue": "",
+      "pointNameCn": "MOSFET最低温度"
+    },
+    {
+      "flag": false,
+      "pointId": "2600",
+      "pointValue": "",
+      "pointNameCn": "MOSFET最低温度的编号最小的模块"
+    },
+    {
+      "flag": false,
+      "pointId": "2700",
+      "pointValue": "",
+      "pointNameCn": "BMS平均温度"
+    },
+    {
+      "flag": false,
+      "pointId": "2800",
+      "pointValue": "11.5",
+      "pointNameCn": "BMS最高温度"
+    },
+    {
+      "flag": false,
+      "pointId": "2900",
+      "pointValue": "1",
+      "pointNameCn": "BMS最高温度所在模块及序号"
+    },
+    {
+      "flag": false,
+      "pointId": "3000",
+      "pointValue": "11.5",
+      "pointNameCn": "BMS最低温度"
+    },
+    {
+      "flag": false,
+      "pointId": "3100",
+      "pointValue": "1",
+      "pointNameCn": "BMS最低温度所在模块及序号"
+    },
+    {
+      "flag": false,
+      "pointId": "3200",
+      "pointValue": "0",
+      "pointNameCn": "系统告警状态1"
+    },
+    {
+      "flag": false,
+      "pointId": "3201",
+      "pointValue": "0",
+      "pointNameCn": "单芯电压一致性告警"
+    },
+    {
+      "flag": false,
+      "pointId": "3202",
+      "pointValue": "0",
+      "pointNameCn": "MOSFET高温"
+    },
+    {
+      "flag": false,
+      "pointId": "3203",
+      "pointValue": "0",
+      "pointNameCn": "单芯温度低温"
+    },
+    {
+      "flag": false,
+      "pointId": "3204",
+      "pointValue": "0",
+      "pointNameCn": "单芯温度高温"
+    },
+    {
+      "flag": false,
+      "pointId": "3205",
+      "pointValue": "0",
+      "pointNameCn": "单芯电压低压"
+    },
+    {
+      "flag": false,
+      "pointId": "3206",
+      "pointValue": "0",
+      "pointNameCn": "单芯电压高压"
+    },
+    {
+      "flag": false,
+      "pointId": "3207",
+      "pointValue": "0",
+      "pointNameCn": "模块总压低压"
+    },
+    {
+      "flag": false,
+      "pointId": "3208",
+      "pointValue": "0",
+      "pointNameCn": "模块总压高压"
+    },
+    {
+      "flag": false,
+      "pointId": "3300",
+      "pointValue": "0",
+      "pointNameCn": "系统告警状态2"
+    },
+    {
+      "flag": false,
+      "pointId": "3301",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "3302",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "3303",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "3304",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "3305",
+      "pointValue": "0",
+      "pointNameCn": "内部通信错误"
+    },
+    {
+      "flag": false,
+      "pointId": "3306",
+      "pointValue": "0",
+      "pointNameCn": "放电过流告警"
+    },
+    {
+      "flag": false,
+      "pointId": "3307",
+      "pointValue": "0",
+      "pointNameCn": "充电过流告警"
+    },
+    {
+      "flag": false,
+      "pointId": "3308",
+      "pointValue": "0",
+      "pointNameCn": "单芯温度一致性告警"
+    },
+    {
+      "flag": false,
+      "pointId": "3400",
+      "pointValue": "0",
+      "pointNameCn": "系统保护状态1"
+    },
+    {
+      "flag": false,
+      "pointId": "3401",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "3402",
+      "pointValue": "0",
+      "pointNameCn": "MOSFET过温"
+    },
+    {
+      "flag": false,
+      "pointId": "3403",
+      "pointValue": "0",
+      "pointNameCn": "单芯温度欠温"
+    },
+    {
+      "flag": false,
+      "pointId": "3404",
+      "pointValue": "0",
+      "pointNameCn": "单芯温度过温"
+    },
+    {
+      "flag": false,
+      "pointId": "3405",
+      "pointValue": "0",
+      "pointNameCn": "单芯电压欠压"
+    },
+    {
+      "flag": false,
+      "pointId": "3406",
+      "pointValue": "0",
+      "pointNameCn": "单芯电压过压"
+    },
+    {
+      "flag": false,
+      "pointId": "3407",
+      "pointValue": "0",
+      "pointNameCn": "模块总压欠压"
+    },
+    {
+      "flag": false,
+      "pointId": "3408",
+      "pointValue": "0",
+      "pointNameCn": "模块总压过压"
+    },
+    {
+      "flag": false,
+      "pointId": "3500",
+      "pointValue": "0",
+      "pointNameCn": "系统保护状态2"
+    },
+    {
+      "flag": false,
+      "pointId": "3501",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "3502",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "3503",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "3504",
+      "pointValue": "0",
+      "pointNameCn": "系统故障保护"
+    },
+    {
+      "flag": false,
+      "pointId": "3505",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "3506",
+      "pointValue": "0",
+      "pointNameCn": "放电过流保护"
+    },
+    {
+      "flag": false,
+      "pointId": "3507",
+      "pointValue": "0",
+      "pointNameCn": "充电过流保护"
+    },
+    {
+      "flag": false,
+      "pointId": "3508",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "3600",
+      "pointValue": "56.5",
+      "pointNameCn": "充电电压建议上限"
+    },
+    {
+      "flag": false,
+      "pointId": "3700",
+      "pointValue": "48.0",
+      "pointNameCn": "充电电压建议下限"
+    },
+    {
+      "flag": false,
+      "pointId": "3800",
+      "pointValue": "40.0",
+      "pointNameCn": "最大充电电流"
+    },
+    {
+      "flag": false,
+      "pointId": "3900",
+      "pointValue": "100.0",
+      "pointNameCn": "最大放电电流"
+    },
+    {
+      "flag": false,
+      "pointId": "4000",
+      "pointValue": "192",
+      "pointNameCn": "充放电状态"
+    },
+    {
+      "flag": false,
+      "pointId": "4001",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "4002",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "4003",
+      "pointValue": "0",
+      "pointNameCn": "空"
+    },
+    {
+      "flag": false,
+      "pointId": "4004",
+      "pointValue": "0",
+      "pointNameCn": "满充请求"
+    },
+    {
+      "flag": false,
+      "pointId": "4005",
+      "pointValue": "0",
+      "pointNameCn": "强充2"
+    },
+    {
+      "flag": false,
+      "pointId": "4006",
+      "pointValue": "0",
+      "pointNameCn": "强充1"
+    },
+    {
+      "flag": false,
+      "pointId": "4007",
+      "pointValue": "1",
+      "pointNameCn": "Discharge enable"
+    },
+    {
+      "flag": false,
+      "pointId": "4008",
+      "pointValue": "1",
+      "pointNameCn": "Charge enable"
+    },
+    {
+      "flag": false,
+      "pointId": "4100",
+      "pointValue": "0",
+      "pointNameCn": "总报警状态"
+    }
+  ],
+  "info": "Request successful"
+}
+
+============================================================
+Endpunkt: Gerät lesen (einzelne/mehrere Punkte)
+Path: /v1/device/read
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "NETWORK_ERROR"
+}
+
+============================================================
+Endpunkt: Energiedaten nach Datum [Junior Box: Fehler ohne date-Parameter]
+Path: /v1/device/getEnergyDataBySn
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX",
+  "date": "2026-03-12"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "request parameter is not null"
+}
+
+============================================================
+Endpunkt: Historische Daten exportieren
+Path: /v1/device/history/export/task
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "Network Anomaly"
+}
+
+============================================================
+Endpunkt: Batterie-Einstellungen [Junior Box: Network Anomaly]
+Path: /v1/battery/setting/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+FEHLER: HTTPSConnectionPool(host='open-api.dyness.com', port=443): Read timed out. (read timeout=15)
+
+============================================================
+Endpunkt: Peak Control Einstellungen [Junior Box: Network Anomaly]
+Path: /v1/peakControl/setting/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "Network Anomaly"
+}
+
+============================================================
+Endpunkt: Laststeuerung Einstellungen
+Path: /v1/loadControl/setting/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "Network Anomaly"
+}
+
+============================================================
+Endpunkt: Erweiterte Einstellungen
+Path: /v1/advanced/setting/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+FEHLER: HTTPSConnectionPool(host='open-api.dyness.com', port=443): Read timed out. (read timeout=15)
+
+============================================================
+Endpunkt: Basis-Einstellungen lesen
+Path: /v1/base/read
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "Network Anomaly"
+}
+
+============================================================
+Endpunkt: Sicherheitseinstellungen
+Path: /v1/safety/setting/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+FEHLER: HTTPSConnectionPool(host='open-api.dyness.com', port=443): Read timed out. (read timeout=15)
+
+============================================================
+Endpunkt: Systemzeit-Einstellungen
+Path: /v1/systemTime/setting/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "Network Anomaly"
+}
+
+============================================================
+Endpunkt: Fehlerwarnung Einstellungen
+Path: /v1/faultWarn/setting/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "Network Anomaly"
+}
+
+============================================================
+Endpunkt: Erkennung/Inspektion Einstellungen
+Path: /v1/detection/setting/single/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "Network Anomaly"
+}
+
+============================================================
+Endpunkt: Inverter-Einstellungen Detail
+Path: /v1/inverter/setting/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "NETWORK_ERROR"
+}
+
+============================================================
+Endpunkt: Inverter-Einstellung einzeln lesen
+Path: /v1/inverter/setting/single/detail
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "NETWORK_ERROR"
+}
+
+============================================================
+Endpunkt: Lade-/Entlade-Konfiguration [Junior Box: Device connection timed out]
+Path: /v1/device/singleGetChargeDischargeConfig
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "Device connection timed out"
+}
+
+============================================================
+Endpunkt: Nur Entlade-Konfiguration
+Path: /v1/device/singleGetDischargeConfig
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "Device connection timed out"
+}
+
+============================================================
+Endpunkt: Alarm-/Fehlerliste
+Path: /v1/alarm/query
+Body: {
+  "deviceSn": "R07E964668XXXXX-BMS",
+  "collectorSn": "R07E964668XXXXX"
+}
+============================================================
+{
+  "code": "500",
+  "data": null,
+  "info": "Device ID Cannot Be Empty"
+}
+
+============================================================
+Endpunkt: Gruppen-Liste
+Path: /v1/group/getGroupList
+Body: {}
+============================================================
+{
+  "code": "200",
+  "data": [],
+  "info": "Request successful"
+}
+
+============================================================
+Endpunkt: Safety-Code Liste
+Path: /v1/group/getSafelyList
+Body: {}
+============================================================
+{
+  "code": "200",
+  "data": [
+    {
+      "code": "0",
+      "value": "50Hz Grid Default"
+    },
+    {
+      "code": "102",
+      "value": "ChileMTA"
+    },
+    {
+      "code": "103",
+      "value": "ChileMTB"
+    },
+    {
+      "code": "104",
+      "value": "USA_208VacLUMA"
+    },
+    {
+      "code": "105",
+      "value": "USA_240VacLUMA"
+    },
+    {
+      "code": "106",
+      "value": "EN50549"
+    },
+    {
+      "code": "1",
+      "value": "50Hz LV Default"
+    },
+    {
+      "code": "2",
+      "value": "60Hz Grid Default"
+    },
+    {
+      "code": "3",
+      "value": "60Hz LV Default"
+    },
+    {
+      "code": "4",
+      "value": "Argentina"
+    },
+    {
+      "code": "5",
+      "value": "AU_Endeavour"
+    },
+    {
+      "code": "6",
+      "value": "Australia A"
+    },
+    {
+      "code": "7",
+      "value": "Australia Ausgrid"
+    },
+    {
+      "code": "8",
+      "value": "Australia Energex"
+    },
+    {
+      "code": "9",
+      "value": "Australia Ergon"
+    },
+    {
+      "code": "10",
+      "value": "Australia Essential"
+    },
+    {
+      "code": "11",
+      "value": "Australia GreenGrid"
+    },
+    {
+      "code": "12",
+      "value": "Australia Horizon"
+    },
+    {
+      "code": "13",
+      "value": "Australia MicroGrid"
+    },
+    {
+      "code": "14",
+      "value": "Australia Pwcore_CitiPW"
+    },
+    {
+      "code": "15",
+      "value": "Australia SAPN"
+    },
+    {
+      "code": "16",
+      "value": "Australia Western"
+    },
+    {
+      "code": "17",
+      "value": "Austra"
+    },
+    {
+      "code": "18",
+      "value": "Austria"
+    },
+    {
+      "code": "19",
+      "value": "Barbados"
+    },
+    {
+      "code": "20",
+      "value": "Belgium"
+    },
+    {
+      "code": "21",
+      "value": "Brazil"
+    },
+    {
+      "code": "22",
+      "value": "Brazil LV"
+    },
+    {
+      "code": "23",
+      "value": "Bulgaria"
+    },
+    {
+      "code": "24",
+      "value": "CEI_016"
+    },
+    {
+      "code": "25",
+      "value": "Chile"
+    },
+    {
+      "code": "26",
+      "value": "China"
+    },
+    {
+      "code": "27",
+      "value": "China HHV"
+    },
+    {
+      "code": "28",
+      "value": "China HV"
+    },
+    {
+      "code": "29",
+      "value": "China Station"
+    },
+    {
+      "code": "30",
+      "value": "China HongKong"
+    },
+    {
+      "code": "31",
+      "value": "Cyprus"
+    },
+    {
+      "code": "32",
+      "value": "Czech"
+    },
+    {
+      "code": "33",
+      "value": "Danmark"
+    },
+    {
+      "code": "34",
+      "value": "DEWA LV"
+    },
+    {
+      "code": "35",
+      "value": "DEWA MV"
+    },
+    {
+      "code": "36",
+      "value": "Energe30K"
+    },
+    {
+      "code": "37",
+      "value": "Ergon30K"
+    },
+    {
+      "code": "38",
+      "value": "France"
+    },
+    {
+      "code": "39",
+      "value": "French 50Hz"
+    },
+    {
+      "code": "40",
+      "value": "French 60Hz"
+    },
+    {
+      "code": "41",
+      "value": "G59/3"
+    },
+    {
+      "code": "42",
+      "value": "G83/G59"
+    },
+    {
+      "code": "43",
+      "value": "Germany"
+    },
+    {
+      "code": "44",
+      "value": "Germany_B"
+    },
+    {
+      "code": "45",
+      "value": "GreeceMainland"
+    },
+    {
+      "code": "46",
+      "value": "Netherlands"
+    },
+    {
+      "code": "47",
+      "value": "Holland 16/20A"
+    },
+    {
+      "code": "48",
+      "value": "Holland_MV"
+    },
+    {
+      "code": "49",
+      "value": "Hungary"
+    },
+    {
+      "code": "50",
+      "value": "IEC61727_60Hz"
+    },
+    {
+      "code": "51",
+      "value": "IEEE1547 208Vac"
+    },
+    {
+      "code": "52",
+      "value": "IEEE1547 220Vac"
+    },
+    {
+      "code": "53",
+      "value": "IEEE1547 230Vac"
+    },
+    {
+      "code": "54",
+      "value": "IEEE1547 240Vac"
+    },
+    {
+      "code": "55",
+      "value": "India"
+    },
+    {
+      "code": "56",
+      "value": "India Higher"
+    },
+    {
+      "code": "57",
+      "value": "Ireland"
+    },
+    {
+      "code": "58",
+      "value": "Italy"
+    },
+    {
+      "code": "59",
+      "value": "JP_50Hz"
+    },
+    {
+      "code": "60",
+      "value": "JP_60Hz"
+    },
+    {
+      "code": "61",
+      "value": "Korea"
+    },
+    {
+      "code": "62",
+      "value": "Mauritius"
+    },
+    {
+      "code": "63",
+      "value": "NewZealand"
+    },
+    {
+      "code": "64",
+      "value": "Northern Ireland"
+    },
+    {
+      "code": "65",
+      "value": "Philippines"
+    },
+    {
+      "code": "66",
+      "value": "Poland"
+    },
+    {
+      "code": "67",
+      "value": "Poland_MV"
+    },
+    {
+      "code": "68",
+      "value": "Romania"
+    },
+    {
+      "code": "69",
+      "value": "Slovakia"
+    },
+    {
+      "code": "70",
+      "value": "South Africa"
+    },
+    {
+      "code": "71",
+      "value": "Spain"
+    },
+    {
+      "code": "72",
+      "value": "Spain_MV"
+    },
+    {
+      "code": "73",
+      "value": "SpainIslands"
+    },
+    {
+      "code": "74",
+      "value": "SriLanka"
+    },
+    {
+      "code": "75",
+      "value": "Sweden"
+    },
+    {
+      "code": "76",
+      "value": "Sweden_MV"
+    },
+    {
+      "code": "77",
+      "value": "Switzerland"
+    },
+    {
+      "code": "78",
+      "value": "Taiwan"
+    },
+    {
+      "code": "79",
+      "value": "Thailand MEA"
+    },
+    {
+      "code": "80",
+      "value": "Thailand"
+    },
+    {
+      "code": "81",
+      "value": "VDE4110"
+    },
+    {
+      "code": "82",
+      "value": "Warehouse"
+    },
+    {
+      "code": "83",
+      "value": "USA_208VacDefault"
+    },
+    {
+      "code": "84",
+      "value": "USA_240VacDefault"
+    },
+    {
+      "code": "85",
+      "value": "USA_208VacCA_SCE"
+    },
+    {
+      "code": "86",
+      "value": "USA_240VacCA_SCE"
+    },
+    {
+      "code": "87",
+      "value": "USA_208VacCA_SDGE"
+    },
+    {
+      "code": "88",
+      "value": "USA_240VacCA_SDGE"
+    },
+    {
+      "code": "89",
+      "value": "USA_208VacCA_PGE"
+    },
+    {
+      "code": "90",
+      "value": "USA_240VacCA_PGE"
+    },
+    {
+      "code": "91",
+      "value": "USA_208VacHECO_14HO"
+    },
+    {
+      "code": "92",
+      "value": "USA_240VacHECO_14HO"
+    },
+    {
+      "code": "93",
+      "value": "USA_208VacHECO_14HM"
+    },
+    {
+      "code": "94",
+      "value": "USA_240VacHECO_14HM"
+    },
+    {
+      "code": "95",
+      "value": "USA_480VacDefault"
+    },
+    {
+      "code": "96",
+      "value": "USA_480VacCA_SCE"
+    },
+    {
+      "code": "97",
+      "value": "USA_480VacHECO_14HO"
+    },
+    {
+      "code": "98",
+      "value": "USA_208VacKAAI_14HO"
+    },
+    {
+      "code": "99",
+      "value": "USA_240VacKAAI_14HO"
+    },
+    {
+      "code": "100",
+      "value": "Australia B"
+    },
+    {
+      "code": "101",
+      "value": "Australia C"
+    }
+  ],
+  "info": "Request successful"
+}
+
+============================================================
+Endpunkt: System-Verknüpfungsliste (Inverter ↔ Datenlogger)
+Path: /v1/group/getSystemList
+Body: {}
+============================================================
+{
+  "code": "200",
+  "data": [],
+  "info": "Request successful"
+}
+
+============================================================
+Test abgeschlossen!
+Bitte teile diese Ausgabe auf GitHub wenn du ein neues
+Dyness-Modell testest: https://github.com/shopf/dyness_battery
+============================================================
